@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortable</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sortable.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="sortable" class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">a</div>
+      <div class="box">b</div>
+      <div class="box">c</div>
+      <div class="box">d</div>
+      <div class="box">e</div>
+      <div class="box">f</div>
+      <div class="box">g</div>
+    </div>
+    <div id="sortable2" class="container">
+      <div class="box">a</div>
+      <div class="box">b</div>
+      <div class="box">c</div>
+      <div class="box">d</div>
+      <div class="box">e</div>
+      <div class="box">f</div>
+      <div class="box">g</div>
+    </div>
+    <script>
+      sortable({
+        id: "sortable",
+        onUpdate: () => {
+          console.log("updated");
+        },
+        onComplete: () => {
+          console.log("completed");
+        },
+      });
+      sortable({ id: "sortable2" });
+    </script>
+  </body>
+</html>
